@@ -123,6 +123,11 @@ public class TestClient
                         AuthRequest p = new AuthRequest(in[1], in[2]);
                         out.writeBytes(p.Encode() + "\n");
                     }
+                    else if(in[0].equals("/quit"))
+                    {
+                    	Quit q = new Quit("User diconnecting");
+                    	out.writeBytes(q.Encode() + "\n");
+                    }
                     else
                     {
                         System.out.println("Unknown command");
