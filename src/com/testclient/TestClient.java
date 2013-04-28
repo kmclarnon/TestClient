@@ -185,6 +185,13 @@ public class TestClient
                                 break;
                             }
                             case Packet.UNKNOWN: 
+                            {
+                            	
+                            }
+                            case Packet.UPDATE:
+                            {
+                            	System.out.println(((Update)p).Encode());
+                            }
                         }
                     }
                         
